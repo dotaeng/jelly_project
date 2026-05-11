@@ -1,0 +1,251 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.4;
+}
+
+/* Container for posts */
+.posts {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Individual Post Card */
+.post-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Image Wrapper */
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 75%;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.imageWrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Post Details */
+.underPost {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.profilePic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.username {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.likebtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.heart {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.heart:hover {
+  color: #e74c3c;
+}
+
+.likebtn span {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Post Title */
+.title {
+  padding: 10px;
+  font-size: 0.95rem;
+  color: #333;
+  border-top: 1px solid #eee;
+}
+
+/* Filter Navbar */
+.filter-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #ddd;
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+/* Filter Left */
+.filter-left {
+  display: flex;
+  gap: 20px;
+}
+
+.filter-link {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+
+.filter-link.active {
+  font-weight: bold;
+  color: black;
+  text-decoration: underline;
+  text-underline-offset: 14px;
+  text-decoration-thickness: 3px;
+}
+
+/* Dropdown Menu */
+.filter-dropdown {
+  position: relative;
+}
+
+.filter-dropdown .filter-link {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  z-index: 10;
+  min-width: 200px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f4f4f4;
+}
+
+/* Show dropdown on hover */
+.filter-dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .posts {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .filter-navbar {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .filter-left,
+  .filter-right {
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+  }
+
+  .posts {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .filter-navbar {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-navbar {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .post-card {
+    border-radius: 5px;
+    box-shadow: none;
+  }
+
+  .imageWrapper {
+    padding-top: 100%;
+  }
+
+  .username {
+    font-size: 0.9rem;
+  }
+
+  .likebtn span {
+    font-size: 0.8rem;
+  }
+}

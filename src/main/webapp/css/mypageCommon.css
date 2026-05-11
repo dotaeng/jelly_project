@@ -1,0 +1,42 @@
+@charset "UTF-8";
+.mypage-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1250px;
+  width: 90%;
+}
+
+.mypage-content {
+  max-width: 1000px;
+  width: 90%;
+  margin: 24px 0 0 50px;
+  display: flex;
+  flex-direction: column; 
+}
+
+/* mypage subtitle과 그 옆에 버튼  */
+.mypageSubtitle {
+  font-size: 24px;
+  font-weight: bold;
+  max-width: inherit;
+  width: 100%;
+  height: 30px;
+  border-bottom: 3px black solid;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.insert-btn {
+  display: flex;
+  float: right;
+  padding: 10px;
+  justify-content: center;
+  margin: 10px 0;
+  height: 40px;
+  align-items: center;
+  border: 1px black solid;
+  border-radius: 10px;
+  color: gray;
+}

@@ -1,0 +1,301 @@
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/woff2/PretendardVariable.woff2")
+    format("woff2-variations");
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.container {
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  border: #ffffff solid 1px;
+  margin: 100px auto 0;
+  padding-top: 1rem;
+}
+
+.header {
+  width: 100%;
+  background-color: hsl(0, 0%, 100%);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+/* 헤더 TOP */
+.header-top {
+  width: 1280px;
+  height: 30px;
+  margin: 10px auto 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px;
+  font-size: 13px;
+  color: #222222cc;
+  box-sizing: border-box;
+}
+
+.header-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  margin-right: 20px;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: #222222cc;
+  font-size: 13px;
+}
+
+.header-menu a:hover {
+  color: #000;
+}
+
+/* 헤더 MAIN */
+.header-main {
+  width: 1280px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.logo {
+  margin-left: -13px;
+}
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* 헤더 BOTTOM */
+.header-bottom {
+  width: 1280px;
+  margin: 5px auto 0;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bottom-nav {
+  display: flex;
+  gap: 15px;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #222222;
+  font-weight: 500;
+  font-size: 20px;
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.bottom-nav a:hover {
+  color: #000;
+}
+
+.bottom-nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+}
+
+/* 검색 폼 */
+.form {
+  --timing: 0.3s;
+  --width-of-input: 200px;
+  --height-of-input: 40px;
+  --border-height: 2px;
+  --input-bg: #fff;
+  --border-color: #cdcacacc;
+  --border-radius: 30px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease, border-color 0.3s ease;
+  background: var(--input-bg, #fff);
+  margin-top: 2px;
+  text-align: right;
+  margin-left: 55rem;
+}
+
+.form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+
+.form svg {
+  width: 17px;
+  margin-top: 3px;
+}
+
+.input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+input:not(:placeholder-shown) ~ .reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  font-weight: bolder;
+}
+
+.form-group input {
+  width: calc(100% - 2px);
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  background-color: #fff;
+  box-shadow: inset 0 -2px 0 0 #dcdcdc;
+  transition: box-shadow 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  box-shadow: inset 0 -2.5px 0 0 #000;
+}
+
+/* .form-group label {
+  display: block;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+} */
+
+.login-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.login-btn:hover {
+  background-color: #333;
+}
+
+.links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.links a {
+  color: #696969;
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-size: 12px;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+#logo2 {
+  width: 250px;
+}
+
+.pw {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.p-content {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.email {
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.phone {
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+::placeholder {
+  color: #d7d7d7;
+}

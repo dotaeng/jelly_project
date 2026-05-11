@@ -1,0 +1,201 @@
+
+/* 전체 페이지 컨테이너 */
+.mypage-container {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1280px;
+  width: 90%;
+  height: 1300px;
+}
+
+/* mypage 내용 영역 */
+.mypage-content {
+  max-width: 1000px;
+  width: 90%;
+  margin: 24px 0 0 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+/* mypage box */
+.mypage-box1,
+.mypage-box2,
+.mypage-box3 {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px; 
+}
+
+/* mypage-box1 (프로필 정보) */
+.mypage-box1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100px;
+  border: 1px solid #ddd;
+  justify-content: flex-start;
+}
+
+/* 프로필 이미지 */
+.profile-img-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* 프로필 정보 */
+.profile-info {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.profile-user-nickname {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.profile-user-email {
+  color: gray;
+  font-size: 14px;
+}
+
+/* 프로필 버튼  */
+.profile-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: flex-end;
+  margin-right: 20px; 
+}
+
+/* 프로필 버튼 */
+.profile-info-btn {
+  padding: 8px 20px;
+  background-color: #fff; 
+  color: #000; 
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.profile-info-btn:hover {
+  background-color: #f4f4f4; 
+}
+
+/* 최근 구매내역 및 판매내역 테이블 */
+.purchase-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: none; 
+}
+
+.purchase-table th, .purchase-table td {
+  padding: 12px;
+  text-align: center;
+  border: none;
+}
+
+.purchase-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+#btn1 {
+  margin-left: 404px;
+  margin-top: -2px;
+}
+
+#btn2 {
+  margin-right: 20px;
+  margin-top: -2px;
+}
+
+/* 상품 이미지 */
+.product-image {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* 상품명 */
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-name {
+  font-size: 14px;
+}
+
+.product-price {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+  text-align: right;
+  margin-left: 750px; 
+  margin-top: -30px; 
+}
+
+/* 구매내역 및 판매내역 리스트 */
+.purchase-list {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.purchase-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.purchase-list li .product-info {
+  margin-left: 20px;
+}
+
+/* 제목 */
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 최근 구매내역과 판매내역 박스 (mypage-box2, mypage-box3) */
+.mypage-box2,
+.mypage-box3 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: none;
+}
+
+.mypage-box2 .purchase-list,
+.mypage-box3 .purchase-list {
+  padding-left: 0;
+  margin: 0;
+}
+
+/* 최근 구매내역과 판매내역 리스트 */
+.purchase-list li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd; 
+}

@@ -1,0 +1,193 @@
+/* 태그 버튼 스타일 */
+.tag-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 14px;
+  color: #222222;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  margin: 20px 0px;
+}
+
+/* 모달창 스타일 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  width: 450px;
+  max-height: 80vh;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+/* 검색 폼 스타일 */
+.search-form {
+  --timing: 0.3s;
+  --width-of-input: 93%;
+  --height-of-input: 40px;
+  --border-radius: 30px;
+  position: relative;
+  width: var(--width-of-input);
+  height: var(--height-of-input);
+  display: flex;
+  align-items: center;
+  padding-inline: 0.8em;
+  border: 1px solid #cdcacacc;
+  border-radius: var(--border-radius);
+  transition: border-radius 0.5s ease, border-color 0.3s ease;
+  background: #fff;
+}
+
+.search-form button {
+  border: none;
+  background: none;
+  color: #8b8ba7;
+}
+
+.search-form svg {
+  width: 17px;
+}
+
+.search-input {
+  font-size: 0.9rem;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  border: none;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-reset {
+  border: none;
+  background: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.search-input:not(:placeholder-shown) ~ .search-reset {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 상품 검색 결과 */
+#product-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+.product-card {
+  display: flex;
+  align-items: center; /* 이미지와 텍스트 세로 정렬 */
+  border: 1px solid #ededed;
+  padding: 10px;
+  border-radius: 8px;
+  gap: 10px; /* 이미지와 텍스트 간격 */
+}
+
+.product-card img {
+  width: 100px; /* 고정된 크기 */
+  height: 100px; /* 고정된 크기 */
+  object-fit: contain;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column; /* 텍스트 세로 정렬 */
+}
+
+.product-name {
+  margin-top: 5px;
+}
+
+.brand {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+#selected-product {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #fff; /* 모달 배경색과 동일하게 설정 */
+  z-index: 1001; /* 다른 요소 위로 배치 */
+}
+
+#selected-product img {
+  width: calc(20% - 8px); /* 5개 이미지가 균일하게 들어가도록 계산 */
+  max-width: 100px; /* 이미지 최대 크기 제한 */
+  aspect-ratio: 1; /* 정사각형 유지 */
+  object-fit: cover; /* 이미지가 컨테이너에 꽉 차도록 설정 */
+  border-radius: 5px; /* 이미지 모서리를 둥글게 처리 */
+  border: 1px solid #ddd; /* 이미지 테두리 */
+}
+
+#tag-products {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background-color: #fff; /* 모달 배경색과 동일하게 설정 */
+}
+
+#tag-products img {
+  width: calc(20% - 8px); /* 5개 이미지가 균일하게 들어가도록 계산 */
+  max-width: 100px; /* 이미지 최대 크기 제한 */
+  aspect-ratio: 1; /* 정사각형 유지 */
+  object-fit: cover; /* 이미지가 컨테이너에 꽉 차도록 설정 */
+  border-radius: 5px; /* 이미지 모서리를 둥글게 처리 */
+  border: 1px solid #ddd; /* 이미지 테두리 */
+}
+
+.add-products-btn {
+	background-color: #222222;
+	color: #fff;
+	padding: 10px;
+	border-radius: 6px;
+	margin-top: 10px;
+}

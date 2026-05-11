@@ -1,0 +1,105 @@
+/* 모달창 오버레이 */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* 모달창 컨텐츠 */
+.modal-content {
+  background-color: #fff;
+  width: 490px;
+  height: auto;
+  max-height: 80vh; 
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto; 
+}
+
+/* 모달 닫기 버튼 */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #999;
+}
+
+.modal-close:hover {
+  color: #333;
+}
+
+/* 사이즈 버튼 그리드 */
+.size-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; 
+  width: 100%;
+  justify-items: center;
+}
+
+/* 사이즈 버튼 */
+.size-item {
+  display: flex;
+  justify-content: center;
+}
+
+.size-button {
+  width: 150px;
+  height: 52px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  text-decoration: none;
+  align-items: center;
+  color: #000;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.size-button:hover {
+  border-color: #333;
+}
+
+.size-button.disabled {
+  color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+/* 모달 버튼 내부 사이즈 스타일 */
+.size-button span:first-child {
+  color: #222222;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+/* 모달 버튼 내부 가격 스타일 */
+.size-button .price {
+  color: #f15746;
+  font-size: 12px;
+  font-weight: normal; 
+}
+
+/* 구매 입찰 스타일 */
+.size-button .bid-label {
+  color: #666 !important;
+  font-size: 12px;
+  opacity: 0.8;
+}

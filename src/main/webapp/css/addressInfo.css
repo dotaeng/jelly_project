@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+.default-address {
+	margin: 50px 0 20px 0;
+	border-bottom: rgb(131, 131, 131) 2px solid;
+	padding-bottom: 40px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.addressList {
+	margin: 40px 0;
+	display: flex;
+	justify-content: space-between;
+	border-bottom: lightgray 1px solid;
+	padding-bottom: 40px;
+}
+
+.addressee {
+	font-weight: bold;
+	font-size: 16px;
+	color: black;
+	display: flex;
+	align-items: center;
+}
+
+.addresseeInfo span {
+	font-size: 14px;
+	display: inline-block;
+	padding-top: 5px;
+	font-weight: light;
+}
+
+.address-btnGroup {
+	display: flex;
+	align-items: center;
+}
+
+.address-btnGroup > button {
+	border: lightgray 1px solid;
+	border-radius: 10px;
+	color: gray;
+	font-size: 13px;
+	margin-left: 10px;
+	padding: 6px 9px;
+}
+
+.default-address-mark {
+	height: 20px;
+	width: 70px;
+	border-radius: 20px;
+	background-color: #f4f4f4;
+	color: gray;
+	font-size: 13px;
+	font-weight: lighter;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 10px;
+}
+/* 모달창 */
+/* 버튼 */
+#add-address-modalCloseButton,
+#modify-address-modalCloseButton {
+	cursor: pointer;
+}
+/* 모달 컨테이너 */
+#add-address-modalContainer,
+#modify-address-modalContainer {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0, 0, 0, 0.5);
+}
+
+#add-address-modalContainer.hidden,
+#modify-address-modalContainer.hidden {
+	display: none;
+}
+
+/* 모달 내용 */
+#modalContent {
+	background-color: #ffffff;
+	width: 450px;
+	height: 530px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	position: relative;
+}
+
+#modalContent .modal-close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	border: none;
+	background: transparent;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#modalContent h3 {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 35px;
+}
+/* 새주소 관련 css */
+.sub-title {
+	font-weight: bold;
+	font-size: 15px;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+input[type="text"] {
+	color: gray;
+	width: 99%;
+	border: none;
+	border-bottom: #f4f4f4 1px solid;
+	padding-bottom: 6px;
+}
+
+#input-name:focus, #input-detailAddress:focus {
+	outline: none;
+	border-bottom: black 2px solid;
+}
+
+input[type="text"]:focus {
+	outline: none;
+}
+
+#name-alert {
+	margin-top: 5px;
+	color: red;
+	font-size: 12px;
+}
+
+.input-box {
+	margin: 20px 0px;
+}
+
+#searchAddress,
+#searchModifyAddress {
+	font-size: 12px;
+	display: flex;
+	border: #ddd 1px solid;
+	border-radius: 10px;
+	padding: 4px 9px;
+	height: 24px;
+	align-items: center;
+	font-weight: lighter;
+	cursor: pointer
+}
+
+#searchAddress:hover {
+	border: black 1px solid;
+}
+
+.checkDefaultAdd {
+	display: flex;
+	align-items: center;
+}
+
+.checkBtn {
+	width: 25px;
+	height: 25px;
+	background: white;
+	border-radius: 5px;
+	border: #ddd 1px solid;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	font-size: 18px;
+}
+
+.addressInfo span {
+	margin-left: 11px;
+	font-size: 14px;
+}
+
+#saveBtn,
+#modifyBtn {
+	background: #ddd;
+	border-radius: 14px;
+	padding: 13px;
+	margin: 39px 168px;
+	width: 114px;
+	border: none;
+	color: #f4f4f4;
+	font-size: 15px;
+}
+
+#saveBtn:hover,
+#modifyBtn:hover {
+	background: black;
+	color: white;
+}

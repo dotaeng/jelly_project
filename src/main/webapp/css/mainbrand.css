@@ -1,0 +1,88 @@
+/* Main Brand Header */
+.main-brand-header {
+  width: 1280px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+}
+
+.main-brand-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+  display: inline-block;
+}
+
+.main-brand-header a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 10px;
+}
+
+/* Main Brand Container */
+.main-brand-container {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+/* Main Brand Card */
+.main-brand-card {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-brand-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.main-brand-card img:hover {
+  transform: scale(1.1);
+}
+
+.main-brand-card .main-brand-name {
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+/* Main Brand Card Actions */
+.main-brand-card .main-brand-actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.main-brand-card .main-brand-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-brand-card .main-brand-button:hover {
+  background-color: #333;
+}
+
+/* 저장된 상태 스타일 */
+.main-brand-card .main-brand-button.saved {
+  background-color: white;
+  color: black;
+}

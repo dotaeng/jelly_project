@@ -1,0 +1,182 @@
+/* BODY */
+.main-style-popular-body {
+  font-family: "Pretendard Variable", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  flex-direction: column; 
+  padding: 40px 0;
+  min-height: 100vh; 
+  box-sizing: border-box;
+}
+
+/* 컨테이너 */
+.main-style-popular-container {
+  width: 100%;
+  max-width: 1280px;
+  display: flex;
+  justify-content: space-between; 
+  align-items: stretch;
+  gap: 20px; 
+  margin: 0 auto; 
+  box-sizing: border-box;
+}
+
+/* 섹션 */
+.main-style-popular-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 섹션 제목 스타일 */
+.main-style-popular-section h2 {
+  margin: 0 0 20px 0;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px; 
+}
+
+.main-style-popular-section h2 a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size: 1.2rem; 
+}
+
+/* 세로 구분선 */
+.main-style-popular-divider {
+  width: 1px;
+  background-color: #ddd; 
+  height: auto;
+  margin: 0 10px; 
+  align-self: stretch; 
+  display: block; 
+}
+
+/* STYLE 섹션 */
+.main-style-popular-style-items,
+.main-style-popular-popular-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.main-style-popular-style-item,
+.main-style-popular-popular-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.main-style-popular-style-item .imageWrapper,
+.main-style-popular-popular-item .image-link {
+  display: block;
+  width: 230px;
+  height: 230px;
+  border: none; 
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.main-style-popular-style-item .imageWrapper img,
+.main-style-popular-popular-item .image-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 프로필 이미지 이름 정렬 */
+.main-style-popular-style-item .underPost {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  max-width: 230px;
+  margin-top: 10px;
+}
+
+/* 프로필 이미지 */
+.main-style-popular-style-item .underPost .profilePic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%; 
+}
+
+/* 프로필 이름 */
+.main-style-popular-style-item .underPost .username {
+  font-size: 1rem; 
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: 180px;
+}
+
+.main-style-popular-style-item .underPost .likebtn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer; 
+  margin-left: auto;
+}
+.main-style-popular-style-item .underPost .likebtn .like-btn {
+  width: 20px;
+  height: 20px;
+}
+
+.main-style-popular-style-item .underPost .likebtn .like-count {
+  font-size: 0.9rem;
+  color: gray;
+}
+
+/* POPULAR */
+.main-style-popular-popular-item .description {
+  color: gray;
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.main-style-popular-popular-item .price {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+  background-color: #f9f9f9;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* BRAND 섹션 */
+.main-style-popular-brand-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.main-style-popular-brand-container img {
+  max-width: 100%;
+  height: auto;
+}

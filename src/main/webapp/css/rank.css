@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+
+.myRank {
+	background-color: #1c1c1c;
+	margin-top: 23px;
+	margin-bottom: 30px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-radius: 21px;
+	padding: 20px 0px;
+	display: flex;
+	width: 500px;
+}
+
+.myRankContent {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	border-radius: 21px;
+	width: 100%;
+	margin: 10px 0;
+}
+
+.items {
+	display: flex;
+	color: #FFFFFF80;
+	flex-direction: column;
+	align-items: center;
+}
+
+.myRankTitle {
+	margin-top: 10px;
+	font-weight: 700;
+	font-size: 40px;
+	color: white;
+}
+
+.mySellFee {
+	margin-top: 10px;
+	font-weight: 700;
+	font-size: 40px;
+	color: #7348c2;
+}
+
+.divideline {
+	background-color: #555;
+	width: 1px;
+	height: 87px;
+}
+
+.myRanknotice p {
+	color: #FFFFFF80;
+	font-size: 12px;
+}
+
+.rankGraph {
+	width: 500px;
+	height: 180px;
+	display: flex;
+	align-items: flex-end;
+	margin-bottom: 50px;
+}
+
+.graph {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#level1 {
+	height: 60px;
+	background: #c4c6ca;
+}
+
+#level2 {
+	height: 90px;
+	background: #a3a7ae;
+}
+
+#level3 {
+	height: 120px;
+	background: #888d96;
+}
+
+#level4 {
+	height: 150px;
+	background: #737882;
+}
+
+#level5 {
+	height: 180px;
+	background: #646a76;
+}
+
+.graph>div {
+	font-size: 13px;
+	font-weight: bold;
+	margin: 7px 0px;
+	color: white;
+}
+
+.rankDetail {
+	display: flex;
+	justify-content: flex-start;
+	padding: 13px;
+	align-items: center;
+	padding-bottom: 27px;
+	width: 500px;
+}
+
+.list {
+	font-size: 30px;
+	font-weight: bold;
+	margin-right: 70px;
+}
+
+.detailTitle {
+	color: rgba(34, 34, 34, .4);
+}
+
+.detail>div>span {
+	font-size: 13px;
+	display: inline-block;
+	margin-right: 7px;
+	display: inline-block;
+}
+.detail > div > div{
+	margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+.line{
+	width: 500px;
+    height: 1px;
+    background: #ddd;
+}

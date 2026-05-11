@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+#body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;  /* Light gray background for body */
+    color: #333;  /* Dark text color for contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Form container */
+#formContainer {
+    background-color: #fff;  /* White background */
+    padding: 20px;
+    border-radius: 8px;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
+    border: 1px solid #ddd;  /* Light border for definition */
+}
+
+/* Form labels */
+#formContainer label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;  /* Dark text color */
+}
+
+/* Input fields */
+#titleInput,
+#contentInput,
+#styleCategoryInput,
+#imageInput {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 16px;
+    background-color: #f8f8f8;  /* Light grey background */
+    color: #333;  /* Dark text */
+    border: 1px solid #ccc;  /* Light border */
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#titleInput:focus,
+#contentInput:focus,
+#styleCategoryInput:focus,
+#imageInput:focus {
+    border-color: #333;  /* Dark border on focus */
+    outline: none;
+}
+
+/* Textarea */
+#contentInput {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit button */
+#submitButton {
+    background-color: #333;  /* Black background */
+    color: #fff;  /* White text */
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+#submitButton:hover {
+    background-color: #222;  /* Darker black on hover */
+}
+
+/* Image preview section */
+#imagePreview {
+    margin-top: 16px;
+    padding: 8px;
+    background-color: #f8f8f8;  /* Light grey background */
+    border-radius: 4px;
+    border: 1px solid #ccc;  /* Light border */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;  /* Space between images */
+}
+
+/* Style for images inside the preview section */
+#imagePreview img {
+    max-width: 200px;  /* Maximum width of the image */
+    max-height: 200px;  /* Maximum height of the image */
+    object-fit: cover;  /* Ensure aspect ratio is maintained */
+    border-radius: 4px;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    #formContainer {
+        width: 90%;
+    }
+}

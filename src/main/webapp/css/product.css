@@ -1,0 +1,241 @@
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('./fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+
+body {
+  margin: 0;
+  font-family: "Pretendard Variable", Arial, sans-serif;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.categories {
+  width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.categories::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: calc(100%); 
+  height: 1px;
+  background-color: #ddd; 
+}
+
+.categories a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  padding: 10px 20px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.categories a:hover {
+  color: #333;
+}
+
+.categories .active {
+  font-weight: bold;
+  color: black;
+}
+
+.categories .active::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+/* 필터 아이콘 */
+.filter-icon {
+  margin-left: auto; 
+  cursor: pointer;
+}
+
+.filter-icon img {
+  width: 24px;
+  height: 24px;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  text-align: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card .image-wrapper {
+  width: 227px;
+  height: 227px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 10px; 
+}
+
+.product-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card .brand,
+.product-card .product-name,
+.product-card .price {
+  text-align: left; 
+}
+
+.product-card .brand {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.product-card .product-name {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.product-card .price {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* 필터 아이콘 */
+.filter-icon {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.filter-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 필터 슬라이드 메뉴 */
+.filter-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; 
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.filter-menu.open {
+  right: 0; 
+}
+
+.filter-menu .close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.filter-menu h2 {
+  margin-top: 50px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.filter-options label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.apply-btn, .reset-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+
+/* 무한 스크롤 로딩 css */
+
+#loading {
+  display: none;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+#loading-svg  {
+  width: 3.25em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+}
+
+circle {
+  fill: none;
+  stroke: hsl(214, 97%, 59%);
+  stroke-width: 2;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}

@@ -1,0 +1,67 @@
+/* 메인 샵 페이지 */
+.main-shop-page {
+  margin: 0;
+  margin-top: 50px;
+  padding: 0;
+  font-family: "Pretendard Variable", Arial, sans-serif;
+}
+
+/* 메인 샵 컨테이너 */
+.shop-container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* 샵 헤더 */
+.shop-header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.shop-header button {
+  border: none;
+  background: none;
+  font-size: 26px;
+  color: #000;
+  cursor: pointer;
+  padding: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.shop-header button:hover {
+  transform: scale(1.2);
+  color: #555;
+}
+
+/* 샵 그리드 */
+.shop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; 
+}
+
+/* 샵 아이템 */
+.shop-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.shop-item img {
+  width: 192px;
+  height: 100px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.shop-item p {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333;
+}

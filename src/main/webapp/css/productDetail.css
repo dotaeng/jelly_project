@@ -1,0 +1,423 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0; 
+}
+
+.content-wrapper {
+  flex: 1 0 auto;
+}
+
+.product-detail-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 1280px; /* 640px x 2 (왼쪽 + 오른쪽) */
+  justify-content: space-between; /* 섹션 간의 간격 균등 분배 */
+}
+.product-image-section {
+  padding-left: 0; /* 불필요한 여백 제거 */
+  width: 640px; /* 가로 길이를 640px로 고정 */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.product-image img {
+  width: 560px;
+  height: auto;
+}
+
+.divider {
+  width: 2px;
+  background-color: #ddd;
+  margin: 0 20px;
+}
+
+.product-info-section {
+  flex: 1;
+  padding: 20px;
+}
+
+/* 즉시 구매가 */
+.instant-buy {
+  margin-bottom: 20px;
+}
+
+.instant-buy-label {
+  font-size: 14px;
+  color: rgba(34, 34, 34, 0.5);
+}
+
+.instant-buy-price {
+  font-size: 27px;
+  font-weight: bold;
+  margin-top: 0;
+}
+
+/* 상품명 및 상세설명 */
+.product-name {
+  font-size: 18px;
+  color: #222222;
+  margin-top: 10px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: rgba(34, 34, 34, 0.5);
+}
+
+/* 상품 세부 정보 */
+.product-details {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  height: 60px;
+  margin-top: 30px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  justify-content: center;
+  width: 33%; 
+  text-align: left; 
+  position: relative;
+}
+
+.detail:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 32px; 
+  top: 15%; 
+  height: 70%; 
+  width: 1px;
+  background-color: #ddd;
+}
+
+.detail .text {
+  font-size: 12px;
+  color: rgba(34, 34, 34, 0.5);
+  margin-bottom: 5px;
+}
+
+.detail span {
+  font-size: 14px;
+  color: #222222;
+}
+
+/* 사이즈 선택 드롭다운 */
+.size-selector {
+  display: flex;
+  justify-content: flex-start;
+  margin: 20px 0;
+}
+
+.size-dropdown {
+  width: 400px;
+  height: 50px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  color: #222;
+}
+
+.size-dropdown span {
+  margin-right: auto;
+}
+
+.size-dropdown svg {
+  fill: #666;
+}
+
+/* 버튼 그룹 */
+.button-group {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 20px;
+}
+
+.buy-button,
+.sell-button {
+  width: 200px;
+  height: 55px; 
+  border-radius: 10px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: flex-start; 
+  padding: 10px; 
+  color: #fff; 
+  border: none; 
+  text-decoration: none;
+  font-size: 16px; 
+  font-weight: bold; 
+  cursor: pointer; 
+}
+
+.buy-button {
+  background-color: #FF7F50; 
+}
+
+.sell-button {
+  background-color: #1290FC; 
+}
+
+.buy-button:hover,
+.sell-button:hover {
+  opacity: 0.9;
+}
+
+.sell-text {
+  font-size: 18px; 
+  font-weight: bold; 
+  margin-right: 10px; 
+  white-space: nowrap; 
+}
+
+.buy-text {
+  font-size: 18px; 
+  font-weight: bold; 
+  margin-right: 25px; 
+  white-space: nowrap; 
+}
+
+.buy-info,
+.sell-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-left: 24px;
+}
+
+.price {
+  font-size: 16px; 
+}
+
+.subtext {
+  font-size: 12px; 
+  color: rgba(255, 255, 255, 0.8);
+}
+
+
+/************** 여기서부터 관심저장 버튼입니다 ********************/
+
+/* 관심 버튼 기본 */
+.btn.btn_wish {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    width: 400px;
+    height: 60px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    color: #333;
+    background-color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn_wish:hover {
+    background-color: #f7f7f7; 
+    border-color: #ccc; 
+}
+
+/* 아이콘 이미지 */
+.wishlist-icon img {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 10px; 
+}
+
+/* "관심상품" 텍스트 */
+.wishlist-text {
+    font-size: 15px; 
+    margin-right: 5px; 
+}
+
+/* "210" 숫자 */
+.wishCount {
+    font-size: 16px; 
+    font-weight: bold;
+    color: #22222C; 
+}
+
+
+/************** 여기서부터 배송관련안내 버튼입니다 ********************/
+
+
+/* 배송 정보 컨테이너 */
+.delivery_way_wrap {
+  width: 400px;
+  padding-bottom: 20px;
+  border-top: 1px solid #ebebeb;
+  margin-top: 20px;
+}
+
+.delivery_title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 16px;
+}
+
+/* 배송 옵션 리스트 */
+.delivery_options {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.delivery_option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* 아이콘 스타일 */
+.delivery_icon img {
+  width: 30px;
+  height: 30px;
+  margin-right: 16px;
+}
+
+/* 배송 옵션 상세 */
+.delivery_details {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery_type {
+  font-size: 14px;
+  font-weight: bold;
+  color: #222;
+}
+
+.delivery_price {
+  font-weight: normal;
+  margin-left: 8px;
+  color: #f15746;
+}
+
+.delivery_desc {
+  font-size: 13px;
+  color: rgba(34, 34, 34, 0.6);
+  margin-top: 4px;
+}
+
+
+/************** 여기서부터 정품 관련 안내입니다 ********************/
+
+/* 정품 보증 컨테이너 */
+.authenticity-info-container {
+  width: 400px; 
+  padding-top: 20px;
+  border-top: 1px solid #ebebeb; 
+  margin-top: 20px; 
+}
+
+/* 정품 보증 리스트 */
+.authenticity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 각 항목 스타일 */
+.authenticity-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px; 
+  padding: 4px 0; 
+}
+
+/* 아이콘 스타일 */
+.authenticity-icon img {
+  width: 40px; 
+  height: 40px;
+  margin-right: 16px;
+}
+
+/* 정품 보증 상세 정보 */
+.authenticity-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.authenticity-title {
+  font-size: 14px; 
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 4px;
+}
+
+.authenticity-desc {
+  font-size: 13px;
+  color: rgba(34, 34, 34, 0.6);
+}
+
+
+/************** 사이즈 정보 스타일 **************/
+
+/* 컨테이너 */
+.size-info-container {
+  width: 100%;
+  max-width: 400px;
+  height: 420px; 
+  margin: 0; 
+  padding-top: 20px;
+  border-top: 1px solid #ebebeb;
+}
+
+.size-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* 표 스타일 */
+.size-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.size-table th, .size-table td {
+  text-align: center;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.size-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+  color: #333;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.size-table td {
+  border-bottom: 1px solid #f0f0f0;
+  color: #444;
+}
+
+/* 참고 텍스트 */
+.size-note {
+  font-size: 12px; 
+  color: rgba(34, 34, 34, 0.6);
+  line-height: 1.6;
+  margin-top: 10px; 
+  text-align: left;
+}
